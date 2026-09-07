@@ -423,6 +423,7 @@ data:extend({
       {
         {"datacell-ai-model-data", 1},
         {"datacell-solved-equation", 1},
+        {"datacell-timewarp_data", 1},
         {"datacell-dna-raw", 1},
         {"datacell-dna-sequenced", 1},
       },
@@ -468,7 +469,7 @@ data:extend({
         recipe = "panglia_sentient_processor"
       },
     },
-    prerequisites = {"panglia_planet_discovery_panglia"},
+    prerequisites = {"panglia_simulation_matrix"},
     unit =
     {
       count = 200,
@@ -477,6 +478,7 @@ data:extend({
         {"datacell-raw-data", 1},
         {"datacell-ai-model-data", 1},
         {"datacell-solved-equation", 1},
+        {"datacell-timewarp_data", 1},
         {"datacell-dna-raw", 1},
         {"datacell-dna-sequenced", 1},
       },
@@ -515,12 +517,12 @@ data:extend({
     prerequisites = {"panglia_planet_discovery_panglia"},
     unit =
     {
-      count = 200,
+      count = 600,
       ingredients =
       {
         {"datacell-raw-data", 1},
       },
-      time = 100,
+      time = 120,
     }
   },
 
@@ -553,6 +555,7 @@ data:extend({
         {"datacell-raw-data", 1},
         {"datacell-ai-model-data", 1},
         {"datacell-solved-equation", 1},
+        {"datacell-timewarp_data", 1},
         {"datacell-dna-sequenced", 1},
       },
       time = 6000
@@ -581,6 +584,7 @@ data:extend({
         {"datacell-raw-data", 1},
         {"datacell-ai-model-data", 1},
         {"datacell-solved-equation", 1},
+        {"datacell-timewarp_data", 1},
         {"datacell-dna-sequenced", 1},
       },
       time = 10000
@@ -608,6 +612,7 @@ data:extend({
         {"datacell-raw-data", 1},
         {"datacell-ai-model-data", 1},
         {"datacell-solved-equation", 1},
+        {"datacell-timewarp_data", 1},
         {"datacell-dna-sequenced", 1},
       },
       time = 10000
@@ -624,6 +629,7 @@ if data.raw["technology"]["matter_printer-technology"] then
   table.insert(data.raw["technology"]["matter_printer-technology"].prerequisites, "panglia_advanced_optics_nanotech")
   table.insert(data.raw["technology"]["matter_printer-technology"].prerequisites, "panglia_panglite_multiplication")
   table.insert(data.raw["technology"]["matter_printer-technology"].prerequisites, "moshine-tech-cosmic-data-outsignal-creation")
+  table.insert(data.raw["technology"]["matter_printer-technology"].prerequisites, "panglia_tech_timewarp_data")
 end
   --table.insert(data.raw["technology"]["panglia_crusher"].effects, {type = "unlock-recipe", recipe = "panglia_universe_precursor"})
 
@@ -638,4 +644,19 @@ end
 
 if data.raw["technology"]["thinking-brain-technology"] then
   data.raw["technology"]["thinking-brain-technology"].prerequisites = {"panglia_simulation_matrix"}
+end
+
+if data.raw["technology"]["snouz_long_electric_gun_turret"] and data.raw["technology"]["moshine-tech-processing-grid"] then
+  table.insert(data.raw["technology"]["snouz_long_electric_gun_turret"].prerequisites, "moshine-tech-processing-grid")
+end
+
+
+if data.raw["technology"]["snouz_wall_hull"] then
+  data.raw["technology"]["snouz_wall_hull"].prerequisites = {"panglia_panglite_fiber", "panglia_tech_timewarp_data"}
+end
+if data.raw["technology"]["snouz_long_electric_gun_turret"] then
+  data.raw["technology"]["snouz_long_electric_gun_turret"].prerequisites = {"panglia_panglite_fiber", "moshine-tech-cosmic-data-outsignal-creation", "panglia_tech_timewarp_data"}
+end
+if data.raw["technology"]["snouz_better_asteroid_collector"] then
+  data.raw["technology"]["snouz_better_asteroid_collector"].prerequisites = {"panglia_sentient_processor", "moshine-tech-cosmic-data-outsignal-creation", "panglia_tech_timewarp_data"}
 end

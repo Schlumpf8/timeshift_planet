@@ -15,7 +15,7 @@ end
 
 if data.raw.item["matter_printer"] then
 	data.raw.item["matter_printer"].subgroup = "panglia-production-machine"
-  data.raw.item["matter_printer"].order = "a[matter_printer]"
+  data.raw.item["matter_printer"].order = "a2[matter_printer]"
 end
 if data.raw.item["cloning-vat"] then
 	data.raw.item["cloning-vat"].subgroup = "panglia-production-machine"
@@ -87,7 +87,7 @@ if mods["quality-seeds"] then
 end
 
 if mods["snouz_better_asteroid_collector"] then
-  data.raw["technology"]["snouz_better_asteroid_collector"].prerequisites = {"panglia_sentient_processor"}
+  --data.raw["technology"]["snouz_better_asteroid_collector"].prerequisites = {"panglia_sentient_processor"}
   data.raw["recipe"]["snouz_better_asteroid_collector"].ingredients =
   {
     {type = "item", name = "asteroid-collector", amount = 2},
@@ -110,7 +110,7 @@ if mods["snouz_space_platform_hull"] then
     {type = "item", name = "space-platform-foundation", amount = 1},
   }
   data.raw["item"]["snouz_wall_hull"].default_import_location = "panglia"
-  data.raw["technology"]["snouz_wall_hull"].prerequisites = {"panglia_panglite_fiber"}
+  --[[data.raw["technology"]["snouz_wall_hull"].prerequisites = {"panglia_panglite_fiber"}
   data.raw["technology"]["snouz_wall_hull"].unit.ingredients =
   {
     {"automation-science-pack", 1},
@@ -125,7 +125,7 @@ if mods["snouz_space_platform_hull"] then
     --{"agricultural-science-pack", 1},
     --{"cryogenic-science-pack", 1},
     --{"promethium-science-pack", 1}
-  }
+  }]]
 end
 
 if mods["snouz_long_electric_gun_turret"] then
@@ -139,7 +139,7 @@ if mods["snouz_long_electric_gun_turret"] then
   data.raw["item"]["snouz_long_electric_gun_turret"].default_import_location = "panglia"
   data.raw["item"]["snouz_long_electric_gun_turret"].sort_item_ingredients = false
 
-  data.raw["technology"]["snouz_long_electric_gun_turret"].prerequisites = {"panglia_panglite_fiber", "electromagnetic-plant"}
+  --[[data.raw["technology"]["snouz_long_electric_gun_turret"].prerequisites = {"panglia_panglite_fiber", "electromagnetic-plant"}
   data.raw["technology"]["snouz_long_electric_gun_turret"].unit.ingredients =
   {
     {"automation-science-pack", 1},
@@ -154,7 +154,7 @@ if mods["snouz_long_electric_gun_turret"] then
     --{"agricultural-science-pack", 1},
     --{"cryogenic-science-pack", 1},
     --{"promethium-science-pack", 1}
-  }
+  }]]
 end
 
 

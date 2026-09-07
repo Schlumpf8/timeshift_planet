@@ -10,7 +10,7 @@
     "base",
     "space-age",
     "panglia_planet_assets >= 0.1.5",
-    "Moshine >= 1.2.7",
+    "Moshine >= 1.2.9",
     "thinking_brain >= 1.2.3",
     "matter_printer >= 0.2.3",
     "Cloning-vat-building >= 1.0.4",

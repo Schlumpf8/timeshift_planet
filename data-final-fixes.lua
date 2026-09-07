@@ -10,6 +10,7 @@ local panglia_only = {{property = "pressure", min = 1401, max = 1401}}
 
 
 if data.raw["lab"]["neural_computer"] then
+  table.insert(data.raw["lab"]["neural_computer"].inputs, "datacell-timewarp_data")
   table.insert(data.raw["lab"]["neural_computer"].inputs, "datacell-dna-raw")
   table.insert(data.raw["lab"]["neural_computer"].inputs, "datacell-dna-sequenced")
 end
@@ -234,12 +235,6 @@ local function add_tech_unit(tech, count, time, ingredients)
 end
 
 
-add_tech_unit("panglia_dna_manipulation", 10, 145*500,     {{"datacell-ai-model-data", 1},{"datacell-solved-equation", 1},{"datacell-dna-raw", 1},} )
-add_tech_unit("panglia_simulation_chamber", 40, 1658*500,  {{"datacell-ai-model-data", 1},{"datacell-solved-equation", 1},{"datacell-dna-raw", 1},{"datacell-dna-sequenced", 1},} )
-add_tech_unit("panglia_sentient_processor", 200, 1008*500, {{"datacell-raw-data", 1},{"datacell-ai-model-data", 1},{"datacell-solved-equation", 1},{"datacell-dna-raw", 1},{"datacell-dna-sequenced", 1},} )
-add_tech_unit("panglia_worker-robots-storage-1", 800, 10000, {{"datacell-raw-data", 1},{"datacell-ai-model-data", 1},{"datacell-solved-equation", 1},{"datacell-dna-sequenced", 1},} )
-add_tech_unit("panglia_worker-robots-storage-2", 1600, 10000, {{"datacell-raw-data", 1},{"datacell-ai-model-data", 1},{"datacell-solved-equation", 1},{"datacell-dna-sequenced", 1},} )
-
 data.raw["technology"]["panglia_worker-robots-speed"].unit =
 {
   count_formula = "2^(L-3)*1000",
@@ -299,5 +294,20 @@ local function add_tech_unit(tech, count, time, ingredients)
 end
 
 add_tech_unit("panglia_planet_discovery_panglia", 250, 60, {{"datacell-raw-data", 1}} )
-add_tech_unit("matter_printer-technology", 300, 10*500, {{"datacell-raw-data", 1},{"datacell-cosmic-data-outsignal", 1}} )
-add_tech_unit("panglia_universe_precursor_volcanic", 500, 10*500, {{"datacell-raw-data", 1},{"datacell-cosmic-data-outsignal", 1},{"datacell-cosmic-data", 1}} )
+add_tech_unit("panglia_tech_timewarp_data",       600, 120, {{"datacell-raw-data", 1}})
+add_tech_unit("matter_printer-technology",        300, 10*500, {{"datacell-raw-data", 1},{"datacell-cosmic-data-outsignal", 1},{"datacell-timewarp_data", 1}} )
+add_tech_unit("panglia_universe_precursor_volcanic", 500, 10*500, {{"datacell-raw-data", 1},{"datacell-cosmic-data-outsignal", 1},{"datacell-cosmic-data", 1},{"datacell-timewarp_data", 1}} )
+
+add_tech_unit("panglia_dna_manipulation",         10, 145*500,     {{"datacell-ai-model-data", 1},{"datacell-solved-equation", 1},{"datacell-dna-raw", 1},} )
+add_tech_unit("panglia_simulation_chamber",       40, 1658*500,  {{"datacell-ai-model-data", 1},{"datacell-solved-equation", 1},{"datacell-dna-raw", 1},{"datacell-dna-sequenced", 1},} )
+add_tech_unit("panglia_sentient_processor",       200, 1008*500, {{"datacell-raw-data", 1},{"datacell-ai-model-data", 1},{"datacell-solved-equation", 1},{"datacell-dna-raw", 1},{"datacell-dna-sequenced", 1},} )
+add_tech_unit("panglia_worker-robots-storage-1",  800, 10000, {{"datacell-raw-data", 1},{"datacell-ai-model-data", 1},{"datacell-solved-equation", 1},{"datacell-dna-sequenced", 1},} )
+add_tech_unit("panglia_worker-robots-storage-2",  1600, 10000, {{"datacell-raw-data", 1},{"datacell-ai-model-data", 1},{"datacell-solved-equation", 1},{"datacell-dna-sequenced", 1},} )
+
+
+add_tech_unit("snouz_wall_hull",                  2000, 60, {{"datacell-raw-data", 1},{"datacell-ai-model-data", 1},{"datacell-solved-equation", 1},{"datacell-timewarp_data", 1}} )
+add_tech_unit("snouz_long_electric_gun_turret",   2500, 60, {{"datacell-raw-data", 1},{"datacell-ai-model-data", 1},{"datacell-solved-equation", 1},{"datacell-cosmic-data-outsignal", 1},{"datacell-timewarp_data", 1}} )
+add_tech_unit("snouz_better_asteroid_collector",  2600, 60, {{"datacell-raw-data", 1},{"datacell-ai-model-data", 1},{"datacell-solved-equation", 1},{"datacell-cosmic-data-outsignal", 1},{"datacell-timewarp_data", 1},{"datacell-dna-sequenced", 1},} )
+
+
+--{"datacell-raw-data", 1}, {"datacell-equation", 1}, {"datacell-ai-model-data", 1},{"datacell-solved-equation", 1},{"datacell-cosmic-data-outsignal", 1},{"datacell-cosmic-data", 1}

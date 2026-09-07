@@ -280,6 +280,14 @@ local graphicsset = {
           },
         },
         {
+          effect = "uranium-glow",
+          render_layer = "item-in-inserter-hand",
+          draw_in_states = {"working","turnon","turnoff"},
+          always_draw = true,
+          fadeout = true,
+          light = {intensity = 0.5, size = 15, shift = {0, -1}, color = util.color("#bdfff7")}
+        },
+        {
           name = "screens",
           constant_speed = true,
           always_draw = true,
@@ -313,7 +321,18 @@ local graphicsset = {
           },
         },
       },
-
+      water_reflection =
+      {
+        pictures =
+        {
+          filename = entity .. entityname .. "_water_reflection.png",
+          width = 32,
+          height = 45,
+          variation_count = 1,
+          scale = 5,
+          shift = util.by_pixel_hr(0, 128)
+        }
+      },
       --[[status_colors = {
         idle={0.1,0.1,0.1,0.1},
         no_minable_resources={0,0,0,0},
@@ -347,7 +366,7 @@ data:extend({
     name = entityname,
     icon = "__panglia_planet__/graphics/icons/panglia_timewarp_data_maker.png",
     subgroup = "panglia-production-machine",
-    order = "g[".. entityname .."]",
+    order = "a1[".. entityname .."]",
     place_result = entityname,
     inventory_move_sound = item_sounds.mechanical_inventory_move,
     pick_sound = item_sounds.mechanical_inventory_pickup,
@@ -363,7 +382,9 @@ data:extend({
     categories = {"crafting"},
     ingredients =
     {
-      {type = "item", name = "panglia_panglite_fiber", amount = 10},
+      {type = "item", name = "data-processor", amount = 1},
+      {type = "item", name = "data-extractor", amount = 1},
+      {type = "item", name = "panglia_panglite", amount = 10},
     },
     results = {{type = "item", name = entityname, amount = 1}},
     allow_productivity = false,
@@ -382,7 +403,7 @@ data:extend({
     subgroup = "moshine-datacells",
     order = "b[panglia]-ea",
     --hide_from_player_crafting = true,
-    energy_required = 1,
+    energy_required = 100,
     ingredients = {
       {type = "fluid", name = "raw-data", amount = 10},
     },
@@ -420,10 +441,10 @@ data:extend({
           filename = entity .. entityname .. "_remnants.png",
           priority="high",
           width = 320,
-          height = 448,
+          height = 320,
           line_length = 1,
           scale = 0.5,
-          shift = util.by_pixel_hr(0, -64),
+          --shift = util.by_pixel_hr(0, -64),
     },
   },
   {
@@ -436,7 +457,7 @@ data:extend({
     minable = {mining_time = 1, result = entityname},
     crafting_categories = {"panglia_timewarp_data_making"},
     max_health = 300,
-    corpse = "moshine_cosmicscanner-remnants",
+    corpse = entityname .. "-remnants",
     dying_explosion = "assembling-machine-1-explosion",
     show_recipe_icon = false,
     icon_draw_specification = {shift = {0, 0}, scale = 1},
@@ -521,7 +542,7 @@ data:extend({
     ),
     alert_icon_shift = util.by_pixel(0, 0),
     graphics_set = graphicsset,
-    graphics_set_flipped  = graphicsset,
+    --graphics_set_flipped  = graphicsset,
     match_animation_speed_to_activity = false,
     
     perceived_performance  = {minimum = 0, maximum = 1},

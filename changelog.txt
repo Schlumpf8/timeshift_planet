@@ -6,16 +6,21 @@ Date: 2026-09-
     - Added "time_flow.data" data-fluid, and corresponding recipes/items
   Changes:
     - Changed name of "Universe incubator" to "Simuverse" (in submod)
+    - Added time_flow.data to tech research items
+  Bugfixes:
+    - Sentient processor tech unlocks after necessary techs
   Balancing:
     - Added out_signal.data as requirement for the simuverse
     - Space platform hull repair speed raised to 1.5 from 0.1 (base wall: 2) (in submod)
+    - Focused gun turret, Space platform hull and Astroid collector MK2 are now unlocked after solved_equations, time_flow.data and out_signal.data
+    - Several techs need time_flow.data
   Gui:
     - Changed datacell stylization and icons to follow Moshine 1.2's changes
     - Changed Panglia's description
     - Changed name of "antilinear zones" or "time anomalies" to "timewarp"
     - Changed name of "Universe incubator" to "Simuverse" (in submod)
   Compatibility:
-    - Requires Moshine 1.2.7 and matter_printer 0.2.3
+    - Requires Moshine 1.2.9 and matter_printer 0.2.3
     - Removed some global variables to increase compatibility
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.12
