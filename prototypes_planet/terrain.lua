@@ -1210,7 +1210,7 @@ data:extend({
 --       ██    ██ ██  ██  ██ ██           ███    ██    ██ ██  ██ ██ ██      
 --       ██    ██ ██      ██ ███████     ███████  ██████  ██   ████ ███████ 
 
-
+--[[
   {
     type = "tile-effect",
     name = "panglia_hidden_beacon_tile_effect",
@@ -1264,7 +1264,7 @@ data:extend({
       far_zoom = 0.063,
     }
   },
-
+]]
 
 
 
@@ -1292,7 +1292,7 @@ data:extend({
     --vehicle_friction_modifier = 4,
     --absorptions_per_second = tile_pollution.fulgora,
     --sprite_usage_surface = "panglia",
-    effect = "panglia_hidden_beacon_tile_effect",
+    --effect = "panglia_hidden_beacon_tile_effect",
     --effect_is_opaque = false,
     --effect_color = {1,1,1,0.3},
     variants =
@@ -1300,13 +1300,13 @@ data:extend({
       transition = transition_masks(),
       material_background =
       {
-        picture = terrain .. "panglia_hidden_beacon_tile.png",
+        picture = terrain .. "fulgoran-sand.png",
         line_length = 1,
         count = 1,
         scale = 0.5
       },
-      material_texture_width_in_tiles = 10,
-      material_texture_height_in_tiles = 7
+      material_texture_width_in_tiles = 32,
+      material_texture_height_in_tiles = 28
     },
     transitions = fulgora_rock_sand_transitions,
     transitions_between_transitions = fulgora_sand_transitions_between_transitions,

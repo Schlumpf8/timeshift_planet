@@ -26,5 +26,18 @@ if settings.startup["moshine-data-colors"] and settings.startup["moshine-data-co
   if data.raw["assembling-machine"]["panglia_timewarp_data_maker"] then
     data.raw["assembling-machine"]["panglia_timewarp_data_maker"].localised_name = {"entity-description.panglia_timewarp_data_maker_nocolor"}
   end
-  
+end
+
+
+function prevent_from_panglia(entity)
+  if not entity.surface_conditions then
+    entity.surface_conditions = {}
+  end
+  table.insert(entity.surface_conditions, { property = "panglia_timeshift", min = 0, max = 0 })
+end
+
+for _, entity in pairs(data.raw["beacon"]) do
+  --if not (entity.name == "ring-teleporter") and not (entity.name == "kr-planetary-teleporter") then
+    prevent_from_panglia(entity)
+  --end
 end

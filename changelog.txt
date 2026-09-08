@@ -2,14 +2,16 @@
 Version: 0.6.0
 Date: 2026-09-
   Features:
-    - Added "Timewarp analyzer" entity and technology
-    - Added "time_flow.data" data-fluid, and corresponding recipes/items
-  Changes:
-    - Changed name of "Universe incubator" to "Simuverse" (in submod)
-    - Added time_flow.data to tech research items
+    - Added "Timewarp analyzer" entity and technology. Transforms foreign.data into time_flow.data
+    - Added "time_flow.data" data-fluid, and corresponding datacell recipes/items
+  Graphics:
+    - Changed the look and feel of timewarp zones
+  Sounds:
+    - Removed timewarp zones sound
   Bugfixes:
     - Sentient processor tech unlocks after necessary techs
   Balancing:
+    - Removed the ability to build beacons
     - Added out_signal.data as requirement for the simuverse
     - Space platform hull repair speed raised to 1.5 from 0.1 (base wall: 2) (in submod)
     - Focused gun turret, Space platform hull and Astroid collector MK2 are now unlocked after solved_equations, time_flow.data and out_signal.data
