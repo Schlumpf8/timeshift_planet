@@ -1,13 +1,15 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.0
-Date: 2026-09-
+Date: 2026-09-09
   Features:
     - Added "Timewarp analyzer" entity and technology. Transforms foreign.data into time_flow.data
     - Added "time_flow.data" data-fluid, and corresponding datacell recipes/items
   Graphics:
     - Changed the look and feel of timewarp zones
+    - Render colors are less saturated.
   Sounds:
-    - Removed timewarp zones sound
+    - Changed timewarp zones sound
+    - Cosmic incubator is half as loud
   Bugfixes:
     - Sentient processor tech unlocks after necessary techs
   Balancing:
@@ -19,10 +21,11 @@ Date: 2026-09-
   Gui:
     - Changed datacell stylization and icons to follow Moshine 1.2's changes
     - Changed Panglia's description
-    - Changed name of "antilinear zones" or "time anomalies" to "timewarp"
-    - Changed name of "Universe incubator" to "Simuverse" (in submod)
+    - Changed name of "antilinear zones"/"time anomalies" to "timewarp"
+    - Changed name of "Seed of mini Universe" to "Microcosm"
+    - Changed timewarp map color
   Compatibility:
-    - Requires Moshine 1.2.9 and matter_printer 0.2.3
+    - Requires Moshine 1.2.9 and matter_printer 0.2.4
     - Removed some global variables to increase compatibility
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.12

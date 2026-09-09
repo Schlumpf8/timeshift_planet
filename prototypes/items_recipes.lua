@@ -772,7 +772,7 @@ data:extend({
     allow_productivity = false,
     auto_recycle = false,
     enabled = false,
-    crafting_machine_tint = {primary = util.color("#00ffff")},
+    crafting_machine_tint = {primary = util.color("#d699ff")},
   },
   {
     type = "recipe",
@@ -795,7 +795,7 @@ data:extend({
     auto_recycle = false,
     enabled = false,
     hide_from_player_crafting = true,
-    crafting_machine_tint = {primary = util.color("#00ffff")},
+    crafting_machine_tint = {primary = util.color("#d699ff")},
   },
 
 })

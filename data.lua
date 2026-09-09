@@ -1,3 +1,7 @@
+-- timewarp color light util.color("#d699ff")
+-- timewarp color dark util.color("#8b41bd")
+
+
 local icons = "__panglia_planet__/graphics/icons/"
 local entity = "__panglia_planet_assets__/graphics/entity/"
 local techicons = "__panglia_planet_assets__/graphics/technology/"

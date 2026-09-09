@@ -1317,7 +1317,9 @@ data:extend({
     trigger_effect = tile_trigger_effects.sand_trigger_effect(),
     walking_speed_modifier = 3,
     vehicle_friction_modifier = 0.3,
-    map_color={33, 0, 37},
+    --map_color = {33, 0, 37},
+    --map_color = util.color("#44d8d8"),
+    map_color = util.color("#5d009b"),
   },
 
 })

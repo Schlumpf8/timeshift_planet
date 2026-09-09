@@ -190,7 +190,11 @@ data:extend({
     hidden = true,
   },
 
-
+--    ██████   █████  ███    ██  ██████  ██      ██  █████  
+--    ██   ██ ██   ██ ████   ██ ██       ██      ██ ██   ██ 
+--    ██████  ███████ ██ ██  ██ ██   ███ ██      ██ ███████ 
+--    ██      ██   ██ ██  ██ ██ ██    ██ ██      ██ ██   ██ 
+--    ██      ██   ██ ██   ████  ██████  ███████ ██ ██   ██ 
   {
     type = "planet",
     name = "panglia",
@@ -297,15 +301,15 @@ data:extend({
         --{0.80, "__space-age__/graphics/lut/vulcanus-1-day.png"},
         --{0.0, "__panglia_planet__/graphics/lut/identity-lut.png"},
         --{0.5, "__core__/graphics/color_luts/lut-night.png"},
-        {0.00, lutpath .. "panglia-day2-lut.png"},
-        {0.20, lutpath .. "panglia-day1-lut.png"},
+        {0.00, lutpath .. "panglia-day1-lut.png"},
+        {0.15, lutpath .. "panglia-day1-lut.png"},
         {0.35, lutpath .. "panglia-afternoon1-lut.png"},
         {0.40, lutpath .. "panglia-afternoon2-lut.png"},
         {0.45, lutpath .. "panglia-night-lut.png"},
         {0.55, lutpath .. "panglia-night-lut.png"},
-        {0.65, lutpath .. "panglia-dawn1-lut.png"},
-        {0.75, lutpath .. "panglia-dawn2-lut.png"},
-        {0.90, lutpath .. "panglia-day1-lut.png"},
+        {0.60, lutpath .. "panglia-dawn1-lut.png"},
+        {0.64, lutpath .. "panglia-dawn2-lut.png"},
+        {0.75, lutpath .. "panglia-day1-lut.png"},
       },
 
       terrain_tint_effect =
